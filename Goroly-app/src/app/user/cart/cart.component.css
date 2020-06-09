@@ -1,0 +1,146 @@
+.align_center{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+
+
+}
+.div1{
+    position: absolute;
+    left: 0%;
+    width: 27%;
+    height: 92%;
+    background-color: #6699cc;
+    border: 2px outset black;
+}
+.name{
+    position: absolute;
+    left: 5%;
+    width: 90%;
+    height: 5%;
+    top: 5%;
+    border: 1px outset black;
+    background-color: aliceblue;
+    text-align: center;
+}
+.prodimg{
+    position: absolute;
+    max-width: 90%;
+    min-width: 50%;
+    max-height: 40%;
+    min-height: 30%;
+    border:1px  outset black;
+    top:11%;
+    left:50%;
+    transform: translate(-50%,0);
+}
+.description{
+    position: absolute;
+    left:5%;
+    width: 90%;
+    height: 30%;
+    top:51%;
+    text-align: justify;
+
+}
+.numberInCart{
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    transform: translate(-50%,0);
+
+
+}
+.changediv{
+    position: absolute;
+    width: 90%;
+    height: 15%;
+    left:50%;
+    transform: translate(-50%,0);
+    top:85%;
+    border: 1px outset black;
+
+}
+.changebtn{
+    position: absolute;
+    top:0%;
+    right: 0%;
+    height: 66%;
+
+
+}
+.removeitemsbtn{
+    position: absolute;
+    bottom:0%;
+    right: 0%;
+    height: 33%;
+    
+
+
+}
+.div2{
+    position: absolute;
+    left: 27%;
+    width: 27%;
+    height: 92%;
+    background-color: #6699cc;
+    border: 2px outset black;
+
+
+}
+
+.itemscarrinho{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+   text-align: center;
+    border:1px outset  black;
+    background-color: aliceblue;
+
+
+
+}
+.itemscarrinhodiv{
+    position: absolute;
+    top:10%;
+    left:5%;
+    height: 80%;
+    width: 90%;
+    background-color: transparent;
+    table-layout: fixed;
+    overflow-y: scroll;
+}
+.totalpay{
+    position: absolute;
+    top:90%;
+    left:5%;
+    width: 90%;
+    height: 8%;
+    background-color: aquamarine;
+    border:3px outset black;
+    border-radius: 3px;
+
+
+}
+.paypal{
+    background: aliceblue;
+    top:0%;
+    left:2%;
+    height: 81vh;
+    width: 96%;
+    position: relative;
+
+
+}
+.div3{
+    position: absolute;
+    left: 54%;
+    width: 27%;
+    height: 92%;
+    background-color: #6699cc;
+    border: 2px outset black;
+
+
+}

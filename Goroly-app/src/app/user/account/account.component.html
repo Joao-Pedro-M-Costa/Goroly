@@ -1,0 +1,177 @@
+<app-layout></app-layout>
+<div class="userdivs">
+    <img class="imguser" [src]="imguser">
+    <div class="pronouns">
+            <p class="center_text">{{pronouns}}</p>
+    </div>
+    <div class=saldo>
+        <p class=center_text>R$:{{saldo}} </p>
+    </div>
+
+    <ng-container *ngIf="form1controler; then editenabled1;else editdisabled1"></ng-container>
+    <ng-template #editdisabled1>
+    <form [formGroup]="form1"class=form1>
+        <Label for ="idusuario">Id Usuario:</Label><br>
+        <input id="idusuario" name="idusuario" formControlName="idusuario"  disabled><br>
+        <Label for="CPF">CPF:</Label><br>
+        <input id="CPF" name="CPF" formControlName="CPF" disabled><br>
+        <Label for="nome">Nome:</Label><br>
+        <input id="nome" name="nome" formControlName="nome"  disabled=form1controler><br>
+        <Label for="sobrenome">Sobrenome:</Label><br>
+        <input id="sobrenome" name="sobrenome" formControlName="sobrenome"  disabled=form1controler><br>
+        <Label for="nacionalidade">Nacionalidade:</Label><br>
+        <input id="nacionalidade" name="nacionalidade" formControlName="nacionalidade"  disabled=form1controler><br>
+        <Label for="datanascimento">Data de Nascimento:</Label><br>   
+        <input id="datanascimento" name="datanascimento" formControlName="datanascimento"  disabled=form1controler><br>
+        <Label for="fusohorario">Fusohorario:</Label><br>
+        <input id="fusohorario" name="fusohorario" formControlName="fusohorario"  disabled=form1controler><br>
+        <Label for="idioma">Idioma:</Label><br>
+        <input id="idioma" name="idioma" formControlName="idioma"  disabled=form1controler><br>
+        <button type="submit" hidden class="btnform1gravar">Gravar</button>
+        <button class="btnform1edit" type="button" (click)="openForm1ToEdit()"><b><p class="editbutton">+</p></b></button>
+
+    </form>
+</ng-template>
+<ng-template #editenabled1>
+    <form [formGroup]="form1" class=form1>
+        <Label for ="idusuario">Id Usuario:</Label><br>
+        <input id="idusuario" name="idusuario" formControlName="idusuario"  disabled><br>
+        <Label for="CPF">CPF:</Label><br>
+        <input id="CPF" name="CPF" formControlName="CPF" ><br>
+        <Label for="nome">Nome:</Label><br>
+        <input id="nome" name="nome" formControlName="nome"><br>
+        <Label for="sobrenome">Sobrenome:</Label><br>
+        <input id="sobrenome" name="sobrenome" formControlName="sobrenome"><br>
+        <Label for="nacionalidade">Nacionalidade:</Label><br>
+        <input id="nacionalidade" name="nacionalidade" formControlName="nacionalidade"><br>
+        <Label for="datanascimento">Data de Nascimento:</Label><br>   
+        <input id="datanascimento" name="datanascimento" formControlName="datanascimento"><br>
+        <Label for="fusohorario">Fusohorario:</Label><br>
+        <input id="fusohorario" name="fusohorario" formControlName="fusohorario"><br>
+        <Label for="idioma">Idioma:</Label><br>
+        <input id="idioma" name="idioma" formControlName="idioma"><br>
+        <button type="submit" class="btnform1gravar">Gravar</button>
+        <button class="btnform1edit" type="button" (click)="openForm1ToEdit()"><b><p class="editbutton">+</p></b></button>
+        </form>
+    </ng-template>
+
+</div>
+
+
+<div class="userdivs2">
+
+    <ng-container *ngIf="form2controler; then editenabled2;else editdisabled2"></ng-container>
+    <ng-template #editenabled2>
+        <form [formGroup]="form2" class=form2>
+            
+            <Label for="conta1">Conta1:</Label><br>
+            <input id="conta1" name="conta1" formControlName="conta1"><br>
+            
+            <Label for="conta2">Conta2:</Label><br>
+            <input id="conta2" name="conta2" formControlName="conta2"><br>
+
+            <Label for="conta3">Conta3:</Label><br>
+            <input id="conta3" name="conta3" formControlName="conta3"><br>
+
+            <button type="submit" class="btnform1gravar">Gravar</button>
+            <button class="btnform1edit" type="button" (click)="openForm2ToEdit()"><b><p class="editbutton">+</p></b></button>
+
+        </form>
+    </ng-template>
+
+    <ng-template #editdisabled2>
+        <form [formGroup]="form2" class=form2>
+            
+            <Label for="conta1">Conta1:</Label><br>
+            <input id="conta1" name="conta1" formControlName="conta1" disabled><br>
+            
+            <Label for="conta2">Conta2:</Label><br>
+            <input id="conta2" name="conta2" formControlName="conta2"disabled ><br>
+
+            <Label for="conta3">Conta3:</Label><br>
+            <input id="conta3" name="conta3" formControlName="conta3" disabled><br>
+
+            <button type="submit" hidden class="btnform1gravar">Gravar</button>
+            <button class="btnform1edit" type="button" (click)="openForm2ToEdit()"><b><p class="editbutton">+</p></b></button>
+
+        </form>
+    </ng-template>
+
+
+    <ng-container *ngIf="form3controler; then editenabled3;else editdisabled3"></ng-container>
+    <ng-template #editenabled3>
+        <form [formGroup]="form3" class=form3>
+            <Label for="telefone1">Telefone1</Label><br>
+            <input id="telefone1" name="telefone1" formControlName="telefone1"><br>
+
+            <label for="telefone2">Telefone2</label><br>
+            <input id="telefone2" name="telefone2" formControlName="telefone2"><br>
+            
+            <label for="email1">Email1</label><br>
+            <input id="email1" name="email1" formControlName="email1"><br>
+            
+            <label for="email2">Email2</label><br>
+            <input id="email2" name="email2" formControlName="email2"><br>
+            
+            <label for="nomerua">Nome da Rua</label><br>
+            <input id="nomerua" name="nomerua" formControlName="nomerua"><br>
+            
+            <label for="bairro">Bairro</label><br>
+            <input id="bairro" name="bairro" formControlName="bairro"><br>
+            
+            <label for="cidade">Cidade</label><br>
+            <input id="cidade" name="cidade" formControlName="cidade"><br>
+            
+            <label for="estado">Estado</label><br>
+            <input id="estado" name="estado" formControlName="estado"><br>
+            
+            <label for="CEP">CEP</label><br>
+            <input id="CEP" name="CEP" formControlName="CEP"><br>
+            <button type="submit" class="btnform1gravar">Gravar</button>
+            <button class="btnform1edit" type="button" (click)="openForm3ToEdit()"><b><p class="editbutton">+</p></b></button>
+
+        </form>
+    </ng-template>
+    <ng-template #editdisabled3>
+        <form [formGroup]="form3" class=form3>
+            <Label for="telefone1">Telefone1</Label><br>
+            <input id="telefone1" name="telefone1" formControlName="telefone1" disabled><br>
+    
+            <label for="telefone2">Telefone2</label><br>
+            <input id="telefone2" name="telefone2" formControlName="telefone2" disabled><br>
+            
+            <label for="email1">Email1</label><br>
+            <input id="email1" name="email1" formControlName="email1" disabled><br>
+            
+            <label for="email2">Email2</label><br>
+            <input id="email2" name="email2" formControlName="email2" disabled><br>
+            
+            <label for="nomerua">Nome da Rua</label><br>
+            <input id="nomerua" name="nomerua" formControlName="nomerua" disabled><br>
+            
+            <label for="bairro">Bairro</label><br>
+            <input id="bairro" name="bairro" formControlName="bairro" disabled><br>
+            
+            <label for="cidade">Cidade</label><br>
+            <input id="cidade" name="cidade" formControlName="cidade" disabled><br>
+            
+            <label for="estado">Estado</label><br>
+            <input id="estado" name="estado" formControlName="estado" disabled><br>
+            
+            <label for="CEP">CEP</label><br>
+            <input id="CEP" name="CEP" formControlName="CEP" disabled><br>
+            <button type="submit"  hidden class="btnform1gravar">Gravar</button>
+            <button class="btnform1edit" type="button" (click)="openForm3ToEdit()"><b><p class="editbutton">+</p></b></button>
+        </form>
+    </ng-template>
+</div>
+<div class="userdivs3">
+    <button class="btnform1edit" type="button" ><b><p class="editbutton">+</p></b></button>
+    <div class="history">
+        <p class="center_text">dunno how to manage hystory yet, prolly gonna copy a list from the account data on bank and allow the user to request review or to delete it...now that i think about it just the review deleting entrys here could lead to trouble at maximum just hide that entry from the user but god dam i can just focus on showing it for later, and that hidem stuf for even later</p>
+    </div>
+
+</div>
+
+
+

@@ -1,0 +1,129 @@
+.userdivs{
+    position: absolute;
+    left:0%;
+    width: 27%;
+    height: 92%;
+    background-color: #6699cc;
+    border: 2px outset black;
+
+
+}
+.editbutton{
+    font-size: x-large;
+    position: relative;
+    margin-top: 10%;
+   
+
+}
+.imguser{
+    position: absolute;
+    height: 25%;
+    width: 50%;
+    top: 2%;
+    left: 2%;
+}
+.pronouns{
+    text-align: center;
+    position: absolute;
+    background-color: aliceblue;
+    border: 2px outset black;
+    height: 25%;
+    width: 45%;
+    left: 53% ;
+    top: 2%;
+
+}
+.center_text{
+    position: absolute;
+    top:50%;
+    left:50%;
+   transform: translate(-50%,-50%);
+
+}
+.saldo{
+    position: absolute;
+    background-color: aliceblue;
+    border: 2px outset black;
+    top:28%;
+    left:5%;
+    height: 10%;
+    width: 90%;
+}
+
+.form1{
+    text-align: center;
+    position: absolute;
+    border: 01px outset black;
+    height: 60%;
+    width: 90%;
+    top: 39%;
+    left: 5%;
+    overflow-y: auto;
+
+}
+.btnform1gravar{
+    position: absolute;
+    right:0%;
+    bottom: 50%;
+    transform: translate(0,+50%);
+}
+.btnform1edit{
+    position: absolute;
+    right:0%;
+    top:0%;
+
+}
+
+.userdivs2{
+    position: absolute;
+    left: 27%;
+    width: 27%;
+    height: 92%;
+    background-color: #6699cc;
+    border: 2px outset black;
+
+
+}
+.form2{
+    text-align: center;
+    position: absolute;
+    left: 5%;
+    top:1%;
+    height: 34%;
+    width: 90%;
+    border: 1px outset black;
+
+}
+.form3{
+text-align: center;
+position:absolute;
+left:5%;
+top:35%;
+height: 65%;
+width: 90%;
+border:1px outset black;
+
+}
+.userdivs3{
+    position: absolute;
+    left: 54%;
+    width: 27%;
+    height: 92%;
+    background-color: #6699cc;
+    border: 2px outset black;
+
+
+}
+.history{
+    position: absolute;
+    left:5%;
+    top:5%;
+    width: 90%;
+    height:90%;
+    overflow-y: auto;
+    text-align: justify;
+    border: 2px outset black;
+    background-color: aliceblue;
+
+
+}

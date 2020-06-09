@@ -1,0 +1,98 @@
+.div1{
+    position: absolute;
+    top:1%;
+    left:.5%;
+    height:98%;
+    width:32.5%;
+    border: 1px outset black;
+    background-color:  #6699cc;
+}
+.valido{
+    background-color: darkcyan;
+    color: black;
+}
+.invalido{
+    background-color: brown;
+    color: aliceblue;
+}
+.div1a{
+    position: absolute;
+    top:10%;
+    left:50%;
+    height: 30%;
+    border: 1px outset black;
+    transform: translate(-50%,0);
+
+}
+.div1b{
+    position: absolute;
+    top:40%;
+    left:50%;
+    height: 50%;
+    border: 1px outset black;
+    transform: translate(-50%,0);
+
+}
+.div1c{
+    position: absolute;
+    top:10%;
+    left:50%;
+    height: 50%;
+    border: 1px outset black;
+    transform: translate(-50%,0);
+
+}
+.warntextdiv{
+    position: absolute;
+    top:5%;
+    left: 50%;
+    transform: translate(-50%,0);
+    background: aquamarine;
+    border:2px outset black;
+    width: 90%;
+    height: 90%;
+    overflow-y: auto;
+
+}
+.warntext{
+    position: relative;
+    background-color: aliceblue;
+    border:1px outset black;
+    width: 95%;
+    left:2.5%;
+    top:1%;
+}
+.div2{
+    position: absolute;
+    top:1%;
+    left:33.5%;
+    height:98%;
+    width:32.5%;
+    border: 1px outset black;
+    background-color:  #6699cc;
+
+}
+.div3{
+    position: absolute;
+    top:1%;
+    left:66.5%;
+    height:98%;
+    width:32.5%;
+    border: 1px outset black;
+    background-color: #6699cc;
+}
+.form{
+    text-align: center;
+    font-weight: bold;
+}
+.btn{
+    position: absolute;
+    left: 50%;
+    bottom:5%;
+    transform: translate(-50%,0);
+    height: 30%;
+    width: 50%;
+    font-weight: 900;
+    font-size: x-large;
+
+}

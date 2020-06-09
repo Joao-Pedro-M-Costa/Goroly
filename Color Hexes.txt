@@ -1,0 +1,2 @@
+gray blue(divs bg) :#6699cc
+body backgroud:#87aacc

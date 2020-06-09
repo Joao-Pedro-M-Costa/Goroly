@@ -1,0 +1,20 @@
+.MainDiv{
+    padding-top: 5%;
+    background-color: #6699cc;
+    height: 75%;
+    width: fit-content;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+   transform: translate(-50%,-50%);
+    text-align: center;
+    border: 2px outset black;
+
+
+}
+
+.formulario{
+ position: relative;
+ top:0%;
+
+}
