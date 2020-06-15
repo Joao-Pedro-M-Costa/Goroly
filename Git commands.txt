@@ -25,3 +25,5 @@ git checkout -b your-new-branch
 git add <files>
 
 git commit -m <message>
+
+git push origin your-new-branch
