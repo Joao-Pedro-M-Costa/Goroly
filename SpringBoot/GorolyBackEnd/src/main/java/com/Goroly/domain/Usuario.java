@@ -1,0 +1,157 @@
+package com.Goroly.domain;
+
+import java.util.Set;
+
+import javax.persistence.Entity;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+
+import com.Goroly.repository.CarrinhoRepository;
+
+@Entity
+@Table(name = "Usuarios")
+public class Usuario {
+	
+	@Id
+	private String CPF;
+	
+	private String username;
+	private String password;
+    private String email;
+    private String telefone1;
+    private String telefone2;
+    
+    
+    private String nomerua;
+    private String bairro;
+    private String cidade;
+    private String estado;
+    private String CEP;
+    
+    private String nome;
+    private String sobrenome;
+    private String nacionalidade;
+    private String fusohorario;
+    private String idioma;
+    private String datanascimento;
+    
+    @OneToMany
+    private  Set<Produto> carrinho;
+      
+	public Set<Produto> getCarrinho() {
+		return carrinho;
+	}
+
+	public void setCarrinho(Set<Produto> carrinho) {
+		this.carrinho = carrinho;
+	}
+
+	
+	public String getCPF() {
+		return CPF;
+	}
+
+	public void setCPF(String cPF) {
+		CPF = cPF;
+	}
+	public String getUsername() {
+		return username;
+	}
+	public void setUsername(String username) {
+		this.username = username;
+	}
+	public String getPassword() {
+		return password;
+	}
+	public void setPassword(String password) {
+		this.password = password;
+
+	}
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public String getTelefone1() {
+		return telefone1;
+	}
+	public void setTelefone1(String telefone1) {
+		this.telefone1 = telefone1;
+	}
+	public String getTelefone2() {
+		return telefone2;
+	}
+	public void setTelefone2(String telefone2) {
+		this.telefone2 = telefone2;
+	}
+	public String getNomerua() {
+		return nomerua;
+	}
+	public void setNomerua(String nomerua) {
+		this.nomerua = nomerua;
+	}
+	public String getBairro() {
+		return bairro;
+	}
+	public void setBairro(String bairro) {
+		this.bairro = bairro;
+	}
+	public String getCidade() {
+		return cidade;
+	}
+	public void setCidade(String cidade) {
+		this.cidade = cidade;
+	}
+	public String getEstado() {
+		return estado;
+	}
+	public void setEstado(String estado) {
+		this.estado = estado;
+	}
+	public String getCEP() {
+		return CEP;
+	}
+	public void setCEP(String cEP) {
+		CEP = cEP;
+	}
+	public String getNome() {
+		return nome;
+	}
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+	public String getSobrenome() {
+		return sobrenome;
+	}
+	public void setSobrenome(String sobrenome) {
+		this.sobrenome = sobrenome;
+	}
+	public String getNacionalidade() {
+		return nacionalidade;
+	}
+	public void setNacionalidade(String nacionalidade) {
+		this.nacionalidade = nacionalidade;
+	}
+	public String getFusohorario() {
+		return fusohorario;
+	}
+	public void setFusohorario(String fusohorario) {
+		this.fusohorario = fusohorario;
+	}
+	public String getIdioma() {
+		return idioma;
+	}
+	public void setIdioma(String idioma) {
+		this.idioma = idioma;
+	}
+	public String getDatanascimento() {
+		return datanascimento;
+	}
+	public void setDatanascimento(String datanascimento) {
+		this.datanascimento = datanascimento;
+	}
+}

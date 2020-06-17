@@ -1,0 +1,10 @@
+<div class="list">
+    <mat-grid-list cols ="3">
+        <ng-container *ngFor ="let i of produtos;">
+            <mat-grid-tile>    
+                    <app-product-list-element [produto]=i></app-product-list-element>
+            </mat-grid-tile>
+        </ng-container>
+    </mat-grid-list>
+</div>
+

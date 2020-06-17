@@ -16,44 +16,43 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-
-import com.Goroly.domain.Produto;
-import com.Goroly.service.ProdutoService;
+import com.Goroly.domain.Usuario;
+import com.Goroly.service.UsuarioService;
 
 
 @RestController
 @RequestMapping("/api")
 @CrossOrigin
-public class ProdutoRest {
-	
+public class UsuarioRest {
+
 	@Autowired
-	private ProdutoService produtoService;
+	private UsuarioService usuarioService ;
 	
-	@PostMapping("/produto")
-	public ResponseEntity<Produto> salvar(@RequestBody @Valid Produto produto){
-		return ResponseEntity.ok(produtoService.salvar(produto));
+	@PostMapping("/usuario")
+	public ResponseEntity<Usuario> salvar(@RequestBody @Valid Usuario usuario){
+		return ResponseEntity.ok(usuarioService.salvar(usuario));
 		
 	}
-	@PutMapping("/produto")
-	public ResponseEntity<Produto> update(@RequestBody @Valid Produto disciplina) {
-		return ResponseEntity.ok(produtoService.update(disciplina));
+	@PutMapping("/usuario")
+	public ResponseEntity<Usuario> update(@RequestBody @Valid Usuario usuario) {
+		return ResponseEntity.ok(usuarioService.update(usuario));
 	}
 	
 
-	@GetMapping("/produto/{id}")
-	public ResponseEntity<Produto> consultaPorId(@PathVariable Long id) {
-		return ResponseEntity.ok(produtoService.consultaPorId(id));
+	@GetMapping("/usuario/{id}")
+	public ResponseEntity<Usuario> consultaPorCPF(@PathVariable String CPF) {
+		return ResponseEntity.ok(usuarioService.consultaPorCPF(CPF));
 	}
 	
-	@GetMapping("/produto")
-	public ResponseEntity<List<Produto>> listar() {
-		return ResponseEntity.ok(produtoService.listar());
+	@GetMapping("/usuario")
+	public ResponseEntity<List<Usuario>> listar() {
+		return ResponseEntity.ok(usuarioService.listar());
 	}
 
-	@DeleteMapping("/produto/{id}")
-	public ResponseEntity deletePorId(@PathVariable Long id) {
+	@DeleteMapping("/usuario/{CPF}")
+	public ResponseEntity deletePorCPF(@PathVariable String CPF) {
 		try {
-			produtoService.deletePorId(id);
+			usuarioService.deletePorCPF(CPF);
 			return ResponseEntity.ok().build();
 		} catch (Exception e) {
 			return ResponseEntity.badRequest().build();
