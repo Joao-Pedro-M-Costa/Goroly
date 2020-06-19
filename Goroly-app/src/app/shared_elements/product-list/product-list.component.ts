@@ -10,25 +10,26 @@ import {ApiService} from "src/app/shared_elements/api/api.service"
 })
 export class ProductListComponent implements OnInit {
   @Input() productwanted: String;
-  produtos=[
-    {id:0,img:"",descricao:"teste","preco":100,},
-    {"id":0,"img":"","descricao":"teste","preco":100,},
-    {"id":0,"img":"","descricao":"teste","preco":100,},
-    {"id":0,"img":"","descricao":"teste","preco":100,},
-    {"id":0,"img":"","descricao":"teste","preco":100,},
-    {"id":0,"img":"","descricao":"teste","preco":100,},
-    {"id":0,"img":"","descricao":"teste","preco":100,},
-    {"id":0,"img":"","descricao":"teste","preco":100,},
-    {"id":0,"img":"","descricao":"teste","preco":100,},
-    {"id":0,"img":"","descricao":"teste","preco":100,},
-    {"id":0,"img":"","descricao":"teste","preco":100,},
-    {"id":0,"img":"","descricao":"teste","preco":100,},
-    {"id":0,"img":"","descricao":"teste","preco":100,},
-  ]
+  produtos //= [
+  //  { id: 0, img: "", descricao: "teste", "preco": 100, },
+  //  { "id": 0, "img": "", "descricao": "teste", "preco": 100, },
+  //  { "id": 0, "img": "", "descricao": "teste", "preco": 100, },
+  //{ "id": 0, "img": "", "descricao": "teste", "preco": 100, },
+  //  { "id": 0, "img": "", "descricao": "teste", "preco": 100, },
+  //  { "id": 0, "img": "", "descricao": "teste", "preco": 100, },
+  //  { "id": 0, "img": "", "descricao": "teste", "preco": 100, },
+  //  { "id": 0, "img": "", "descricao": "teste", "preco": 100, },
+  //  { "id": 0, "img": "", "descricao": "teste", "preco": 100, },
+  //  { "id": 0, "img": "", "descricao": "teste", "preco": 100, },
+  //  { "id": 0, "img": "", "descricao": "teste", "preco": 100, },
+  //  { "id": 0, "img": "", "descricao": "teste", "preco": 100, },
+  //  { "id": 0, "img": "", "descricao": "teste", "preco": 100, },
+  //]
   constructor(private router:Router,private api:ApiService ) {
-    console.log(api.httpPost("produto",{img:"", descricao:"teste" ,preco:100}));
    }
 
   ngOnInit(): void {
+    this.api.httpGet("produto").subscribe(data=>(this.produtos=data));
   }
+  
 }

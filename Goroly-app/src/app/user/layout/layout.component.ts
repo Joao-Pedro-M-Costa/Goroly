@@ -10,8 +10,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./layout.component.css']
 })
 export class LayoutComponent implements OnInit {
-  logo="https://www.fujideia.com.br/fuji/papw/grupo_handsome_siblings_20022020.png";
-  userimg="https://www.fujideia.com.br/fuji/papw/grupo_handsome_siblings_20022020.png";
+  logo="assets/Images/Goroly-logo.png";
+  userimg="assets/Images/Goroly-logo.png";
   public saldo=0;
   constructor() { }
 

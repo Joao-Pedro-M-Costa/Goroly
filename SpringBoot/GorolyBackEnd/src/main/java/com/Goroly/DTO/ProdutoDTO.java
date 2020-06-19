@@ -5,21 +5,19 @@ import com.Goroly.domain.Produto;
 public class ProdutoDTO {
 	
 	
-	private long id;
+
 	private String descricao;
 	private String expecificacoes;
 	private Number preco;
 	
 	public ProdutoDTO(Produto produto) {
-		this.id = produto.getId();
+		
 		this.descricao = produto.getDescricao();
 		this.expecificacoes = produto.getExpecificacoes();
 		this.preco = produto.getPreco();
 	}
 
-	public long getId() {
-		return id;
-	}
+
 
 	public String getDescricao() {
 		return descricao;

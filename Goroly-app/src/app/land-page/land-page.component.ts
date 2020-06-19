@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup,Validators,FormControl} from '@angular/forms'
 import {Router} from '@angular/router'
+
 @Component({
   selector: 'app-land-page',
   templateUrl: './land-page.component.html',
@@ -8,7 +9,7 @@ import {Router} from '@angular/router'
 })
 export class LandPageComponent implements OnInit {
   formulario :FormGroup;
-  logo="https://www.fujideia.com.br/fuji/papw/grupo_handsome_siblings_20022020.png"
+  logo="assets/Images/Goroly-logo.png";
 
 
   constructor( private router:Router) { 
@@ -32,7 +33,6 @@ export class LandPageComponent implements OnInit {
     //**redirection to apropriate area
     
     //temporary log
-    console.log(dados);
     //temporart redirect to area
     this.router.navigate(['home']);
   }

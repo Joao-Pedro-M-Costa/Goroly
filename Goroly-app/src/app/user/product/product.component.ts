@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators,FormsModule } from '@angular/forms';
+import { ApiService } from 'src/app/shared_elements/api/api.service';
 
 @Component({
   selector: 'app-product',
@@ -8,29 +9,27 @@ import { FormGroup, FormControl, Validators,FormsModule } from '@angular/forms';
 })
 
 export class ProductComponent implements OnInit {
-  produtoimg="https://www.fujideia.com.br/fuji/papw/grupo_handsome_siblings_20022020.png"
-  preco;
-  amount:Number
+  produtoimg="assets/Images/camisa.jpg"
+  produto;
   produtoform :FormGroup;
-  constructor() {
-    this.produtoform =new FormGroup({
-      "descricao":new FormControl("teste",Validators.required),
-      "expecificacoes":new FormControl("1111",Validators.required),
-      "preco":new FormControl(100,Validators.required)
-
-    }
+  constructor(private api:ApiService) {
+    this.api.httpGet(`produto/1`).subscribe(data=>this.produto=data)
     
-    )
-    this.preco=this.produtoform.get('preco').value
-
-  }
+    }
 
   ngOnInit(): void {
+    this.produtoform =new FormGroup({
+      "descricao":new FormControl("teste",Validators.required),
+      "expecificacoes":new FormControl(0,Validators.required),
+      "preco":new FormControl(0,Validators.required),
+      "amount":new FormControl(0)
+
+    })
   }
 
   addToCart(){
-
-    console.log(this.amount);
+    console.log(this.produto)
+    console.log(this.produtoform.get("amount").value);
   }
 
 }

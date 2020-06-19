@@ -23,7 +23,7 @@ import com.Goroly.service.ProdutoService;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin
+@CrossOrigin(origins = "*")
 public class ProdutoRest {
 	
 	@Autowired

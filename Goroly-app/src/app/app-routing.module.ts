@@ -14,7 +14,7 @@ const routes: Routes = [
 {path:"home",component:HomePageComponent},
 {path:"singup",component:SingupPageComponent},
 {path:"account",component:AccountComponent},
-{path:"product/:id",component:ProductComponent},
+{path:"produto/:id",component:ProductComponent},
 {path:"cart",component:CartComponent},
 {path:"admin",component:AdminMainComponent},
 ];
