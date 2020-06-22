@@ -1,0 +1,60 @@
+package com.Goroly.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.Goroly.DTO.UsuarioDTO;
+import com.Goroly.domain.Usuario;
+import com.Goroly.repository.UsuarioRepository;
+
+
+@Service
+public class UsuarioService {
+
+	@Autowired
+	private UsuarioRepository usuarioRepository;
+		
+	public Long getSaldoById(Long id) {
+		return usuarioRepository.findById(id).get().getSaldo();}
+	
+	public Usuario salvar(Usuario usuario) {
+		return usuarioRepository.save(usuario);}
+	
+	public UsuarioDTO consultaPorId(Long id) {
+		UsuarioDTO aux=null;
+		Usuario usuario =usuarioRepository.findById(id).get();
+		  aux.setCPF(usuario.getCPF());
+		  aux.setSaldo(usuario.getSaldo());
+		  aux.setUsername(usuario.getUsername());
+		  aux.setPassword(usuario.getPassword());
+		  aux.setEmail(usuario.getEmail());
+	      aux.setTelefone1(usuario.getTelefone1());
+	      aux.setTelefone2(usuario.getTelefone2());
+	      aux.setNome(usuario.getNome());
+	      aux.setSobrenome(usuario.getSobrenome());
+	      aux.setNacionalidade(usuario.getNacionalidade());
+	      aux.setFusohorario(usuario.getFusohorario());
+	      aux.setIdioma(usuario.getIdioma());
+	      aux.setDatanascimento(usuario.getDatanascimento());
+	      aux.setEnderecos(usuario.getEnderecos());
+	      aux.setCarrinho(usuario.getCarrinho()); 
+		return aux;}
+	
+	
+	public void deletePorId(Long id) {
+		usuarioRepository.deleteById(id);}
+	
+	
+	public List<Usuario> listar(){
+		return usuarioRepository.findAll();}
+	
+	public Usuario update(Usuario usuario) {
+		if(usuario!=null) {
+			return usuarioRepository.save(usuario);
+		}
+		throw new RuntimeException("Erro updating Usuario");
+	}
+	
+}

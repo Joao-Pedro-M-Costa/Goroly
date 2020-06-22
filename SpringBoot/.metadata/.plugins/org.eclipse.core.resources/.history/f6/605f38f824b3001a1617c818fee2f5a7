@@ -1,0 +1,148 @@
+package com.Goroly.DTO;
+
+import java.util.Set;
+
+import com.Goroly.domain.Produto;
+import com.Goroly.domain.Usuario;
+
+public class UsuarioDTO {
+	private String CPF;
+	
+	private String username;
+	private String password;
+    private String email;
+    private String telefone1;
+    private String telefone2;
+    
+    
+    private String nome;
+    private String sobrenome;
+    private String nacionalidade;
+    private String fusohorario;
+    private String idioma;
+    private String datanascimento;
+    private  Set<Produto> carrinho;
+    
+    UsuarioDTO(Usuario usuario){
+    	this.CPF=usuario.getCPF();
+    	
+    	this.username=usuario.getUsername();
+    	this.password=usuario.getPassword();
+    	this.email=usuario.getEmail();
+    	this.telefone1=usuario.getTelefone1();
+    	this.telefone2=usuario.getTelefone2();
+
+    	this.nome=usuario.getNome();
+    	this.sobrenome=usuario.getSobrenome();
+    	this.nacionalidade=usuario.getNacionalidade();
+    	this.fusohorario=usuario.getFusohorario();
+    	this.idioma=usuario.getIdioma();
+    	this.datanascimento=usuario.getDatanascimento();
+    	this.carrinho=usuario.getCarrinho();
+    	
+    }
+
+	public Set<Produto> getCarrinho() {
+		return carrinho;
+	}
+
+	public void setCarrinho(Set<Produto> carrinho) {
+		this.carrinho = carrinho;
+	}
+
+	public String getCPF() {
+		return CPF;
+	}
+
+	public void setCPF(String cPF) {
+		CPF = cPF;
+	}
+
+	public String getUsername() {
+		return username;
+	}
+
+	public void setUsername(String username) {
+		this.username = username;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public String getTelefone1() {
+		return telefone1;
+	}
+
+	public void setTelefone1(String telefone1) {
+		this.telefone1 = telefone1;
+	}
+
+	public String getTelefone2() {
+		return telefone2;
+	}
+
+	public void setTelefone2(String telefone2) {
+		this.telefone2 = telefone2;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getSobrenome() {
+		return sobrenome;
+	}
+
+	public void setSobrenome(String sobrenome) {
+		this.sobrenome = sobrenome;
+	}
+
+	public String getNacionalidade() {
+		return nacionalidade;
+	}
+
+	public void setNacionalidade(String nacionalidade) {
+		this.nacionalidade = nacionalidade;
+	}
+
+	public String getFusohorario() {
+		return fusohorario;
+	}
+
+	public void setFusohorario(String fusohorario) {
+		this.fusohorario = fusohorario;
+	}
+
+	public String getIdioma() {
+		return idioma;
+	}
+
+	public void setIdioma(String idioma) {
+		this.idioma = idioma;
+	}
+
+	public String getDatanascimento() {
+		return datanascimento;
+	}
+
+	public void setDatanascimento(String datanascimento) {
+		this.datanascimento = datanascimento;
+	}
+}

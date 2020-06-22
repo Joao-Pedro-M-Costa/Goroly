@@ -1,0 +1,59 @@
+<app-layout></app-layout>
+<button (click)="teste()">teste</button>
+<div class="div1">
+    <form [formGroup]="product">
+        <input class="name" id="name" name="name" type="text" formControlName="name" disabled>
+        <textarea class="description" id="description" name="description" formControlName="description" disabled></textarea>
+        <img class="prodimg" id="img" name="img"[src]="">       
+    </form>
+<div>
+    <form [formGroup]="product">
+        <div class="changediv">
+            <div>
+                <label for="amount">Quantidade <br>no carrinho:</label>
+                <input  id="amount" name="amount" type="number" formControlName="amount" min="0"max="99" style="width:  3ch;">
+                <button id="change" name="change" type="submit" class="changebtn">Change number<br> of items</button>
+                <button id="removeitems" name="removeitems" class="removeitemsbtn">Remove item</button>
+            </div>
+        </div>
+    </form>
+</div>
+</div>
+
+<div class="div2">
+
+    <Label style="position: absolute; width: 90%; text-align: center; left: 5%;top:5%;font-size: x-large;"> <b>Item List:</b></Label><br>
+    <div class="itemscarrinhodiv">
+            <table class=itemscarrinho>
+            <thead>
+                <th>Name</th>
+                <th>Number</th>
+            </thead>
+                <tbody>
+                    <tr *ngFor="let produto of cart.get('produtos').value as formArray;">
+                        <td>{{produto.name}}</td>
+                        <td>{{produto.amount}}</td>
+                    </tr>
+                </tbody>
+        </table>
+    </div>
+    <div class="totalpay">
+        <p class="align_center"><b>TOTAL || R$:{{totalpay}}</b></p>
+
+    </div>
+</div>
+
+<div class="div3">
+    <mat-tab-group class="tab">
+        <mat-tab label="Paypal" >
+          <div class="paypal">
+
+          </div>
+        </mat-tab>
+        <mat-tab label="MoreToCome">
+          <div class ="MoreToCome">
+              <p>yeah... i'm not very good at this but how knows ^_^</p>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
+</div>

@@ -1,0 +1,21 @@
+package dbSeeder;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.stereotype.Component;
+
+import com.Goroly.repository.ProdutoRepository;
+import com.Goroly.repository.UsuarioRepository;
+
+@Component
+@ConditionalOnProperty()
+public class DbSeeder implements CommandLineRunner{
+
+		private ProdutoRepository produtoRepository;
+		private UsuarioRepository usuarioRepository;
+		
+		public DbSeeder(ProdutoRepository produtoRepository,
+				UsuarioRepository usuarioRepository){
+			
+		}
+}

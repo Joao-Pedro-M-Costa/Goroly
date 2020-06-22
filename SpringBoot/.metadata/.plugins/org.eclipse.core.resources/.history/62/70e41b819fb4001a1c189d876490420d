@@ -1,0 +1,31 @@
+package com.Goroly.DTO;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
+
+import com.Goroly.domain.Carrinho;
+import com.Goroly.domain.Endereco;
+import com.Goroly.domain.Produto;
+import com.Goroly.domain.Usuario;
+
+public class UsuarioDTO {
+	private String CPF;
+	private Long saldo;
+	
+	private String username;
+	private String password;
+    private String email;
+    private String telefone1;
+    private String telefone2;
+    
+    private String nome;
+    private String sobrenome;
+    private String nacionalidade;
+    private String fusohorario;
+    private String idioma;
+    private String datanascimento;
+    private List<Endereco> enderecos=new ArrayList<>();
+    private  Carrinho carrinho;
+
+}

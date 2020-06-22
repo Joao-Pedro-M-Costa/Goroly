@@ -1,0 +1,8 @@
+
+
+POST localhost:8080/api/produto
+{
+	"descricao":"Default Produto";
+	"expecificacoes":"Default Produto",
+	"preco":100
+}

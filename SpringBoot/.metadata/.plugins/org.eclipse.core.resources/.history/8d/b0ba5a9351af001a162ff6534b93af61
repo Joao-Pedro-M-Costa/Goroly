@@ -1,0 +1,5 @@
+package com.Goroly.domain;
+
+public class Carrinho {
+
+}

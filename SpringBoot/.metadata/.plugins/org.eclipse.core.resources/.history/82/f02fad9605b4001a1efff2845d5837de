@@ -1,0 +1,44 @@
+package com.Goroly.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.Goroly.domain.Usuario;
+import com.Goroly.repository.UsuarioRepository;
+
+
+@Service
+public class UsuarioService {
+
+	@Autowired
+	private UsuarioRepository usuarioRepository;
+		
+	public Long getSaldoById(Long id) {
+		System.out.println(id);
+		Usuario x =usuarioRepository.findById(id).get();
+		return (long) 1;}
+	
+	public Usuario salvar(Usuario usuario) {
+		return usuarioRepository.save(usuario);}
+	
+	public Usuario consultaPorId(Long id) {
+		return usuarioRepository.findById(id).get();}
+	
+	
+	public void deletePorId(Long id) {
+		usuarioRepository.deleteById(id);}
+	
+	
+	public List<Usuario> listar(){
+		return usuarioRepository.findAll();}
+	
+	public Usuario update(Usuario usuario) {
+		if(usuario!=null) {
+			return usuarioRepository.save(usuario);
+		}
+		throw new RuntimeException("Erro updating Usuario");
+	}
+	
+}

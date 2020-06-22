@@ -1,0 +1,39 @@
+package dbSeeder;
+
+import org.aspectj.weaver.ast.Var;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
+import org.springframework.stereotype.Component;
+
+import com.Goroly.domain.Produto;
+import com.Goroly.repository.ProdutoRepository;
+import com.Goroly.repository.UsuarioRepository;
+
+@Component
+@ConditionalOnProperty(name="DbSeedering",havingValue = "true")
+public class DbSeeder implements CommandLineRunner{
+
+		private ProdutoRepository produtoRepository;
+		private UsuarioRepository usuarioRepository;
+		
+		public DbSeeder(ProdutoRepository produtoRepository,
+				UsuarioRepository usuarioRepository){
+			this.produtoRepository=produtoRepository;
+			this.usuarioRepository=usuarioRepository;
+			
+		}
+
+		@Override
+		public void run(String... args) throws Exception {
+			this.produtoRepository.deleteAll();
+			this.usuarioRepository.deleteAll();
+			
+			Produto defaultProduto=new Produto();
+			defaultProduto.setDescricao("defaultProduto");
+			defaultProduto.setExpecificacoes("defaultProduto");
+			defaultProduto.setPreco(100);
+			this.produtoRepository.save(defaultProduto);
+			
+			
+		}
+}

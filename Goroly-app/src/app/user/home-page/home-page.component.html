@@ -1,0 +1,21 @@
+
+<app-layout></app-layout>
+    <mat-tab-group class="tab">
+      <mat-tab label="Recommended" >
+        <div class="tabcontent">
+          <mat-grid-list cols="3">
+            <mat-grid-tile *ngFor="let x of produtos;index as i">
+              <div class="element">
+                <app-product-list-element [produto]="produtos[i]"></app-product-list-element>
+              </div>
+            </mat-grid-tile>
+          </mat-grid-list>
+        </div>
+      </mat-tab>
+      <mat-tab label="Promotions">
+        <div class ="tabcontent">
+          <app-product-list [productwanted]="promotions"></app-product-list> 
+        </div>
+      </mat-tab>
+    </mat-tab-group>
+<router-outlet></router-outlet>

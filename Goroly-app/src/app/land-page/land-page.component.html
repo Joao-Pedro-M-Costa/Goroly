@@ -1,0 +1,18 @@
+<div class="MainDiv">
+    <img [src]="logo" style="height: 50%;">
+    <p>If you don't have an acount <b><a routerLink="/singup" reactiveLinkActive="active">Click here</a></b> to Singup</p>
+    <div class="formulario">
+        <br>
+        <form [formGroup]="formulario" (ngSubmit)="onSubmit()" class="formulario">
+            <Label for=nomeUsuario>Usuario:</Label>
+            <input id="nomeUsuario" name="nomeUsuario" type="text" formControlName="nomeUsuario">
+            <br>
+            <label for="senha">Senha:</label>
+            <input id="senha" name="senha" type="password" formControlName="senha">
+            <br>
+            <button class=botao type="submit" [disabled]="formulario.invalid">LogIn</button>
+        </form>
+    </div>
+</div>
+
+

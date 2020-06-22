@@ -1,0 +1,27 @@
+package com.Goroly.domain;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+@Entity
+@Table(name= "enderecos")
+public class Endereco {
+    @Id
+    @GeneratedValue
+    private long id;
+    
+    private String nomerua;
+    private String bairro;
+    private String cidade;
+    private String estado;
+    private String CEP;
+    
+    @ManyToOne
+    private Usuario usuario;
+    
+    
+}

@@ -1,0 +1,19 @@
+package com.Goroly.domain;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name= "enderecos")
+public class Endereco {
+    @Id
+    private long id;
+    private String nomerua;
+    private String bairro;
+    private String cidade;
+    private String estado;
+    private String CEP;
+    
+    
+}

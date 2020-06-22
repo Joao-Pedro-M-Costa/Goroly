@@ -1,0 +1,52 @@
+package com.Goroly.DTO;
+
+import com.Goroly.domain.Usuario;
+
+public class UsuarioDTO {
+	private String CPF;
+	
+	private String username;
+	private String password;
+    private String email;
+    private String telefone1;
+    private String telefone2;
+    
+    
+    private String nomerua;
+    private String bairro;
+    private String cidade;
+    private String estado;
+    private String CEP;
+    
+    private String nome;
+    private String sobrenome;
+    private String nacionalidade;
+    private String fusohorario;
+    private String idioma;
+    private String datanascimento;
+    
+    UsuarioDTO(Usuario usuario){
+    	this.CPF=usuario.getCPF();
+    	
+    	this.username=usuario.getUsername();
+    	this.password=usuario.getPassword();
+    	this.email=usuario.getEmail();
+    	this.telefone1=usuario.getTelefone1();
+    	this.telefone2=usuario.getTelefone2();
+        
+        
+    	this.nomerua;
+    	this.bairro;
+    	this.cidade;
+    	this.estado;
+    	this.CEP;
+        
+    	this.nome;
+    	this.sobrenome;
+    	this.nacionalidade;
+    	this.fusohorario;
+    	this.idioma;
+    	this.datanascimento;
+    	
+    }
+}
