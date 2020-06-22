@@ -1,4 +1,3 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete resource &apos;papw-feature-fuji_20201&apos;" deleteContents="true" description="Delete resource &apos;papw-feature-fuji_20201&apos;" element1="/papw-feature-fuji_20201" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1592773128632"/>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;papw-feature-fuji_20201&apos;" deleteContents="true" description="Delete resource &apos;papw-feature-fuji_20201&apos;" element1="/papw-feature-fuji_20201" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1592773128632"/>&#x0A;<refactoring comment="Delete resource &apos;GorolyBackEnd&apos;" deleteContents="false" description="Delete resource &apos;GorolyBackEnd&apos;" element1="/GorolyBackEnd" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1592862581117"/>
 </session>
