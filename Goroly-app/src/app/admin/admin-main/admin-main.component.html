@@ -1,0 +1,15 @@
+<mat-tab-group class="tab" (selectedTabChange)="changeTab($event)">
+    <mat-tab label="Produtos" value="produto">
+      <div class="tabcontent">
+        <app-produto-data-table (toggleRow)="toggleRow($event)"></app-produto-data-table>
+      </div>
+    </mat-tab>
+    <mat-tab label="Usuarios" value="user">
+      <div class="tabcontent">
+        <app-usuario-data-table (toggleRow)="toggleRow($event)" ></app-usuario-data-table>    
+      </div>
+    </mat-tab>
+</mat-tab-group>
+<app-admin-side-options [categoria]="currentTab"[id]="id"></app-admin-side-options>
+<app-navbar></app-navbar>
+<router-outlet></router-outlet>

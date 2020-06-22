@@ -1,0 +1,66 @@
+.maindiv{
+    position: absolute;
+    top: 8%;
+    height: 83%;
+    width: 19%;
+    right: .25%;
+    border: 2px outset black;
+
+}
+
+.usersdiv{
+    position: absolute;
+    height: 90%;
+    width: 90%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border:1px outset black;
+
+}
+
+.addUserbtn{
+    position: absolute;
+    height: 10%;
+    left: 50%;
+    transform: translate(-50%,0);
+
+
+}
+.removeUserbtn{
+    position: absolute;
+    height: 10%;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,0);
+
+}
+
+.produtosdiv{
+    position: absolute;
+    height: 90%;
+    width: 90%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border:1px outset black;
+
+}
+
+
+.addProdutobtn{
+    position: absolute;
+    height: 10%;
+    left: 50%;
+    transform: translate(-50%,0);
+
+
+}
+.removeProdutobtn{
+    position: absolute;
+    height: 10%;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%,0);
+
+}

@@ -7,23 +7,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./product-list-element.component.css']
 })
 export class ProductListElementComponent implements OnInit {
-  @Input() produto={ 
-    img:"",
-    preco:0,
-    descricao:"",
-    id:"0"};
 
-  constructor(private router:Router) {
+  @Input() produto;
 
-   }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
   }
- 
-  goToProduct(){
-    console.log(['produto/',this.produto.id]);
-   this.router.navigate(['produto',this.produto.id]);    
+ goToProduto(){
+  this.router.navigate(["produto",this.produto.id]);
 
-  }
-
+ }
 }

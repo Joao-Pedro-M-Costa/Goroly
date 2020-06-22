@@ -1,0 +1,57 @@
+.navbar-menu{
+    position: sticky;
+    top: 0;
+    left: 0;
+    height:7%;
+    width: 99%;
+    border: 1px outset black;
+    background-color: grey;
+}
+
+.logo{
+    position :absolute;
+    height: 100%;   
+
+}
+.menu_links{
+    position: relative;
+    left: 10%;
+    line-height: 100%;
+    width: 50%;
+    margin-top: 1%;
+}
+.userMiniBar{
+    position: absolute;
+    background-color:#6699cc ;
+    right:0%;
+    height: 100%;
+    width: 30%;
+    top:-1%;
+    border: 1px outset black;
+    border-top:none;
+}
+
+.dropbtn{
+    color: black;
+
+}
+.dropdown{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(0,-50%);
+    display: inline-block;
+
+}
+.dropdown-content{
+    display: none;
+    min-width: 80px;
+    font-size: 20;
+    position: absolute;
+    background-color: white;
+    z-index: 1;
+
+}
+.dropdown-content a:hover {background: gray;}
+.dropdown:hover .dropdown-content{display: block;}
+.dropdown:hover .dropbtn{background: blue;}

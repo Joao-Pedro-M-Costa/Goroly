@@ -6,6 +6,9 @@ import { AccountComponent } from './user/account/account.component';
 import { ProductComponent } from './user/product/product.component';
 import { CartComponent } from './user/cart/cart.component';
 import { SingupPageComponent } from './user/singup-page/singup-page.component';
+import { AdminMainComponent } from './admin/admin-main/admin-main.component';
+import { UserEditComponent } from './admin/user-edit/user-edit.component';
+import { ProdutoEditComponent } from './admin/produto-edit/produto-edit.component';
 
 
 const routes: Routes = [
@@ -14,7 +17,10 @@ const routes: Routes = [
 {path:"singup",component:SingupPageComponent},
 {path:"account",component:AccountComponent},
 {path:"produto/:id",component:ProductComponent},
-{path:"cart",component:CartComponent}
+{path:"cart",component:CartComponent},
+{path:"admin",component:AdminMainComponent},
+{path:"admin/user-edit/:id",component:UserEditComponent},
+{path:"admin/produto-edit/:id",component:ProdutoEditComponent},
 ];
 
 @NgModule({

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormArray } from '@angular/forms';
+import { ApiService } from 'src/app/shared_elements/api/api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-singup-page',
@@ -10,7 +12,7 @@ export class SingupPageComponent implements OnInit {
   singupform:FormGroup
   passwordmatch=false;
 
-  constructor() { 
+  constructor(private api:ApiService,private router:Router) { 
     this.singupform= new FormGroup({
 
       "username":new FormControl(null,Validators.required),
@@ -24,9 +26,9 @@ export class SingupPageComponent implements OnInit {
           "bairro": new FormControl(null,Validators.required),
           "cidade":new FormControl(null,Validators.required),
           "estado":new FormControl(null,Validators.required),
-          "CEP":new FormControl(null,Validators.required)
+          "cep":new FormControl(null,Validators.required)
         }),
-      "CPF":new FormControl(null,Validators.required),
+      "cpf":new FormControl(null,Validators.required),
       "nome":new FormControl(null,Validators.required),
       "sobrenome":new FormControl(null,Validators.required),
       "nacionalidade": new FormControl(null,Validators.required),
@@ -71,7 +73,9 @@ export class SingupPageComponent implements OnInit {
   }
 
   finalizar(){
-    console.log(this.singupform);
+    console.log(this.singupform.value);
+    this.api.httpPost("usuario",this.singupform.value);
+    this.router.navigate(["home"]);
  
   }
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ApiService } from 'src/app/shared_elements/api/api.service';
 
 @Component({
   selector: 'app-home-page',
@@ -6,42 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home-page.component.css']
 })
 export class HomePageComponent implements OnInit {
+  recommended="Recommended";
   promotions="Promotions";
+  constructor(private api:ApiService ) {}
 
-  produtos=[{
-    img:"https://www.fujideia.com.br/fuji/papw/grupo_handsome_siblings_20022020.png",
-    preco:100,
-    descricao:"teste1",
-    id:"",
-  },
-  {    
-    img:"",
-    preco:100,
-    descricao:"teste2",
-    id:0,
-  },
-  {
-  img:"",
-  preco:100,
-  descricao:"teste3",
-  id:0,
-  },
-  {
-  img:"",
-  preco:100,
-  descricao:"teste4",
-  id:0,
-  },
-  ]
-  teste={};
-
-  constructor() { }
-
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    
+    
+    
+    
   
-  addition(x){
-    return x+1;
-
   }
+
+  
 
 }

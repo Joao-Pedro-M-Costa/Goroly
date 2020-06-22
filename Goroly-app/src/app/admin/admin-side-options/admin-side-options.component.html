@@ -1,0 +1,19 @@
+<div class= maindiv>
+    
+    <ng-container *ngIf="categoria=='Usuarios';else innerIf1">
+        <div class="usersdiv">
+            <button class="addUserbtn" (click)="addUser(id[0])">Edit User</button>
+            <button class="removeUserbtn" (click)="removeUser(id)">Remove User</button>
+        </div>
+    </ng-container>  
+
+        <ng-template #innerIf1>    
+            <ng-container *ngIf="categoria=='Produtos';">
+                <div class="produtosdiv">
+                    <button class="addProdutobtn"(click)="addProduto(id[0])">Add Product</button>
+                    <button class="removeProdutobtn"(click)="removeProduto(id)">Remove Product</button>
+                </div>
+            </ng-container>
+ 
+        </ng-template>
+</div>
