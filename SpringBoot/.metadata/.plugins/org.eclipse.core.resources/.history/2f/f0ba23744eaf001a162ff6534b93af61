@@ -1,0 +1,5 @@
+package com.Goroly.DTO;
+
+public class UsuarioDTO {
+
+}

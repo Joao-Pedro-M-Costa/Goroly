@@ -1,0 +1,61 @@
+package com.Goroly.rest;
+
+import java.util.List;
+
+import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.Goroly.domain.Produto;
+import com.Goroly.domain.Usuario;
+import com.Goroly.service.ProdutoService;
+
+@RestController
+@RequestMapping("/api")
+public class UsuarioRest {
+
+	@Autowired
+	private ProdutoService produtoService;
+	
+	@PostMapping("/produto")
+	public ResponseEntity<Produto> salvar(@RequestBody @Valid Usuario usuario){
+		return ResponseEntity.ok(produtoService.salvar(usuario));
+		
+	}
+	@PutMapping("/produto")
+	public ResponseEntity<Produto> update(@RequestBody @Valid Usuario usuario) {
+		return ResponseEntity.ok(produtoService.update(usuario));
+	}
+	
+
+	@GetMapping("/produto/{id}")
+	public ResponseEntity<Produto> consultaPorCPF(@PathVariable String CPF) {
+		return ResponseEntity.ok(produtoService.consultaPorCPF(CPF));
+	}
+	
+	@GetMapping("/produto")
+	public ResponseEntity<List<Produto>> listar() {
+		return ResponseEntity.ok(produtoService.listar());
+	}
+
+	@DeleteMapping("/produto/{CPF}")
+	public ResponseEntity deletePorId(@PathVariable String CPF) {
+		try {
+			produtoService.deletePorId(id);
+			return ResponseEntity.ok().build();
+		} catch (Exception e) {
+			return ResponseEntity.badRequest().build();
+		}
+
+	}
+
+}
